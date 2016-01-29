@@ -9,10 +9,10 @@ Partition table scan:
 
 Number	| Start (sector) | End (sector) | Size | Code  Name
 ------------------------------------------------------------------
-   1    |       2048 |         88063 | 42.0 MiB  | EF00 | EFI System
-   2    |      88064 |       4282367 | 2.0 GiB   | 8200 | Linux swap
-   3    |    4282368 |      92362751 | 42.0 GiB  | 8304 | Linux x86-64 root (/)
-   4    |   92362752 |    4294965214 | 2.0 TiB   | 8306 | Linux /srv
+1    |       2048 |         88063 | 42.0 MiB  | EF00 | EFI System
+2    |      88064 |       4282367 | 2.0 GiB   | 8200 | Linux swap
+3    |    4282368 |      92362751 | 42.0 GiB  | 8304 | Linux x86-64 root (/)
+4    |   92362752 |    4294965214 | 2.0 TiB   | 8306 | Linux /srv
 
 # fstab:
  
