@@ -17,19 +17,16 @@ Partition table scan:
 # fstab:
  
     # /dev/sda3
-    LABEL=SYSCHDEM      	/      	btrfs     	rw,relatime,compress=lzo,ssd,discard,space_cache,subvol=/system 0 0
+    LABEL=SYSTEM      	/      	btrfs     	defaults,compress=lzo 0 0
 
     # /dev/sda3
-    LABEL=SYSCHDEM      	/...  	btrfs     	rw,relatime,compress=lzo,ssd,discard,space_cache,subvolid=5	0 0
+    LABEL=SYSTEM      	/...  	btrfs     	subvolid=5	0 0
 
     # /dev/sda4 
-    LABEL=BINNEN        	/srv  	xfs       	rw,relatime,attr2,inode64,noquota	0 2
+    LABEL=BINNEN        	/srv  	xfs       	defaults	0 2
 
     # /dev/sda1
-    LABEL=BUTEN         	/boot 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+    LABEL=BUTEN         	/boot 	vfat      	defaults	0 1
 
     # /dev/sda2
     LABEL=SCHWAPP       	none      	swap      	defaults  	0 0
-
-    localhost:gv0		/storage	glusterfs	defaults	0 0
-
