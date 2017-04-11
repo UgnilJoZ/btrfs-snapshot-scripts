@@ -10,7 +10,7 @@ btrfs subvolume create system
 btrfs subvolume show system
 # Now grap the subvol id in the output and declare the default subvolume:
 btrfs subvolume set-default 258 /target # Can differ from yours!
-scratch shall be a subvolume w/o COW
+# scratch shall be a subvolume w/o COW
 chattr +C scratch
 mkdir /system/...
 cd -
