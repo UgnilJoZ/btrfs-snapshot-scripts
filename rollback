@@ -1,6 +1,9 @@
 #!/bin/sh
-# Atomar rollback of the system to a read-only snapshot.
+# Rollback of the system to a read-only snapshot.
 
 SUBVOLPATH=$(list-snapshots | tail -n ${1-1} | head -n 1)
-SUBVOLID=$(btrfs subvolume show $SUBVOLPATH | grep Subvolume\ ID | cut -d \  -f 3)
+btrfs subvolume snapshot $SUBVOLPATH /.../system-new  # Clone a snapshot as rw subvolume
+SUBVOLID=$(btrfs subvolume show /.../system-new | grep Subvolume\ ID | cut -d \  -f 3)
 btrfs subvolume set-default $SUBVOLID /
+btrfs subvolume delete /.../system
+mv /.../system-new /.../system
