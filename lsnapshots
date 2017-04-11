@@ -1,0 +1,2 @@
+#!/bin/sh
+btrfs subv l -r --sort=path /... | cut -d ' ' -f 9 | grep -E "^root@[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}"
